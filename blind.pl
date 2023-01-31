@@ -7,7 +7,6 @@ use v5.32;
 use Getopt::Long qw(GetOptions);
 use Time::HiRes qw(gettimeofday tv_interval);
 use LWP;
-use HTTP::Request;
 
 sub password_len_query {
     my ($character_len) = @_;
