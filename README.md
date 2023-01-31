@@ -10,7 +10,7 @@ Install LWP:
 
 Clone the repository:
 ```bash
-$ https://github.com/tahnous/portswigger-blind-SQL-injection-.git
+$ git clone  https://github.com/tahnous/portswigger-blind-SQL-injection-.git
 ```
 
 Make the script executable:
